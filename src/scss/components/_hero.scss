@@ -1,0 +1,425 @@
+.hero {
+  color: white;
+  height: 50vw;
+  width: 100vw;
+
+  overflow-y: hidden;
+  display: flex;
+  position: relative;
+
+  &__container {
+    padding: 0;
+    position: relative;
+    padding-top: 6.66vw;
+    padding-left: 5.99vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: url("../img/bg.png") center top/ 100% 100% no-repeat;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      background: linear-gradient(180deg, rgba(22, 26, 30, 0.75) 0%, rgba(22, 26, 30, 0.2925) 36.3%);
+    }
+  }
+
+  .content__wrapper {
+
+    width: 57.3vw;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 3.38vw;
+    line-height: 4.94vw;
+
+    letter-spacing: 0.016vw;
+  }
+
+  &__descr {
+    font-weight: 400;
+    font-size: 1.406vw;
+    line-height: 2.343vw;
+    letter-spacing: 0.04vw;
+
+    margin: 2.34vw 0;
+  }
+
+  .btns {
+    display: flex;
+    gap: 1.4vw;
+  }
+
+  &__btn {
+    border: none;
+    padding: 1.3vw 2.86vw;
+    width: 20.93vw;
+    height: 5.2vw;
+
+    border-radius: 26vw;
+
+    font-weight: 600;
+    font-size: 0.833vw;
+    line-height: 1.25vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.03vw;
+
+    cursor: pointer;
+    color: #FFFFFF;
+    background: #FD2016;
+
+    transition: .3s;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 1.808vw;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+
+      transform: translateX(-3vw) skewX(-30deg);
+      transition: .4s;
+      will-change: transform;
+      animation: glow 5s infinite linear;
+    }
+
+    &:hover {
+      background: #cb2627;
+
+      &::before {
+        opacity: 0;
+      }
+
+      .btn_arrow {
+        transform: rotate(45deg) scale(1.2);
+      }
+    }
+  }
+
+  .btn--red {
+    .btn_arrow {
+      margin-left: 0.72vw;
+      width: 1.145vw;
+      height: 1.145vw;
+      transition: .3s;
+    }
+  }
+
+  .btn--whatsup {
+    background: transparent;
+    padding: 1.6vw;
+    border: 0.05vw solid white;
+
+    .btn_whatsup {
+      margin-right: 0.6vw;
+      width: 1.56vw;
+      height: 1.56vw;
+    }
+  }
+
+  .scroll__down {
+    margin-left: 2.86vw;
+    margin-right: 2.86vw;
+    height: 35.83vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 3;
+    position: relative;
+    writing-mode: vertical-rl;
+  }
+
+  .line {
+    height: 25.41vw;
+    width: 0.2vw;
+    border-left: 0.075vw solid #EFEFEF;
+  }
+
+  .hint {
+
+    font-weight: 700;
+    font-size: 0.833vw;
+    line-height: 1.302vw;
+
+    letter-spacing: 0.08vw;
+
+    display: inline-block;
+    color: #EFEFEF;
+    transform: rotate(180deg);
+  }
+
+  .scroll_anim {
+    position: relative;
+    width: 0.99vw;
+    height: 1.66vw;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0.208vw;
+      height: 0.208vw;
+      left: 0.34vw;
+      top: 0.608vw;
+      background: url("../img/scroll_donat.svg") no-repeat;
+      background-size: 0.208vw;
+      animation: sliderDown 3.5s infinite linear;
+    }
+  }
+
+  .scroll_plug {
+    width: 0.99vw;
+    height: 1.66vw;
+  }
+
+  .hero__check {
+    width: 0.687vw;
+    height: 0.5vw;
+    margin-bottom: 0.7vw;
+  }
+
+  &__bottom {
+    display: flex;
+    position: relative;
+    z-index: 3;
+
+    &--item {
+      flex: 1 0 25%;
+      padding-bottom: 1.74vw;
+
+      font-weight: 500;
+      font-size: 0.885vw;
+      line-height: 1.4vw;
+      letter-spacing: 0.04vw;
+
+      span {
+        font-weight: 800;
+      }
+
+
+      &:last-child {
+        padding-left: 4.94vw;
+      }
+
+      &:not(:last-child) {
+        padding: 0 4.94vw;
+        border-right: 0.05vw solid rgba(255, 255, 255, 0.503);
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+    }
+  }
+}
+
+@keyframes sliderDown {
+  0% {
+    transform: translateY(-0.26vw);
+  }
+
+  50% {
+    transform: translateY(0.52vw);
+  }
+
+  100% {
+    transform: translateY(-0.26vw);
+  }
+}
+
+@keyframes glow {
+  0% {
+    transform: translateX(-3vw) skewX(-30deg);
+
+  }
+
+  100% {
+    transform: translateX(22vw) skewX(-30deg);
+  }
+}
+
+
+@media (max-width: 992px) {
+  .hero {
+    height: 45.25rem;
+    margin-bottom: 10rem;
+    z-index: 3;
+    position: relative;
+
+    .scroll__down {
+      display: none;
+    }
+
+    &__container {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      padding-top: 5.9rem;
+      padding-left: 5.99vw;
+      background-size: 57rem 70%;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 70%;
+      }
+    }
+
+    .content__wrapper {
+
+      width: 17.26rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    &__title {
+      font-size: 1.25rem;
+      line-height: 1.81rem;
+      letter-spacing: 0.04rem;
+    }
+
+    &__descr {
+      font-size: 0.75rem;
+      line-height: 1.125rem;
+
+      letter-spacing: 0.04rem;
+      margin: 1.75rem 0;
+    }
+
+    .btns {
+      display: flex;
+      flex-direction: column;
+      gap: 1.3rem;
+    }
+
+    &__btn {
+      border: none;
+      padding: 0.625rem;
+      width: 16.68rem;
+      height: 3.75rem;
+
+      border-radius: 31.2rem;
+
+      font-size: 0.625rem;
+      line-height: 0.93rem;
+
+      letter-spacing: 0.08rem;
+
+      transition: .3s;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 2.3rem;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: rgb(255, 255, 255);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+
+        transform: translateX(-3.6rem) skewX(-30deg);
+        transition: .4s;
+        will-change: transform;
+        animation: glow 5s infinite linear;
+      }
+
+      .btn_arrow {
+        display: none;
+      }
+    }
+
+
+    .btn--whatsup {
+      background: transparent;
+      padding: 1.6vw;
+      border: 0.05vw solid white;
+
+      .greenmod {
+        color: rgb(3, 190, 3);
+      }
+
+      .btn_whatsup {
+        display: none;
+      }
+    }
+
+
+    .hero__check {
+      width: 0.86rem;
+      height: 0.625rem;
+    }
+
+    &__bottom {
+      position: absolute;
+      bottom: 0;
+      left: .3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 1rem;
+      grid-template-rows: 1fr 1fr;
+    }
+
+
+    &__bottom--item {
+      padding-bottom: 0;
+
+      font-weight: 400;
+      font-size: 0.625rem;
+      line-height: 0.937rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      letter-spacing: 0.02em;
+      color: #000000;
+
+      span {
+        font-weight: 800;
+      }
+
+      &:last-child {
+        padding-left: 0;
+      }
+
+      &:not(:last-child) {
+        padding: 0;
+        border-right: none;
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+@keyframes glow {
+  0% {
+    transform: translateX(-3.6rem) skewX(-30deg);
+
+  }
+
+  100% {
+    transform: translateX(22.4rem) skewX(-30deg);
+  }
+}

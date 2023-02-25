@@ -1,0 +1,22 @@
+<form class="form quest" id="quest" method="POST" enctype="multipart/form-data">
+  <h2 class="quest--caption">Быстро оставить заявку</h2>
+  <p class="quest--text">Введите номер — позвоним вам
+    в течение 5-10 минут в рабочее время</p>
+  <div class="input__box">
+    <input type="tel" class="input__phone input input-tel" data-validate-field="tel" name="Телефон" id="phone"
+      placeholder="Введите телефон">
+    <label for="phone"> Введите ваш номер телефона</label>
+  </div>
+  <button class="hero__btn category__btn modal__btn">Перезвоните мне
+    <span></span>
+  </button>
+
+  <label>
+    <input type="checkbox" id="male" required>
+    <span class="input__check"></span>
+    Нажимая кнопку вы соглашаетесь с условиями <span class="security"> Политики конфиденциальности</span>
+  </label>
+  <div id="error"></div>
+
+  <div class="close" id="modal__close"></div>
+</form>

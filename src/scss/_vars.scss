@@ -1,0 +1,20 @@
+:root {
+  // base
+  --font-family: 'Manrope', sans-serif;
+  --content-width: 100vw;
+  --container-offset: 7.3vw;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light: #fff;
+  --red: #cd281e;
+  --dark: #000;
+}
+
+@media (max-width: 992px) {
+  :root {
+    // base
+    --content-width: 62rem;
+    --container-offset: 1rem;
+  }
+}
