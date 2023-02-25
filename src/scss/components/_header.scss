@@ -283,7 +283,6 @@
     position: fixed;
     top: 0px;
     transition: .3s;
-    overflow-y: scroll;
 
     &__wrap {
       border-bottom: none;
@@ -484,17 +483,17 @@
     }
   }
 
-  .borger__btn {
+  .burger__btn {
     position: relative;
-    z-index: 1000;
+    z-index: 10;
     filter: invert(0);
   }
 
-  .header.color--light .borger__btn {
+  .header.color--light .burger__btn {
     filter: invert(1);
   }
 
-  .header.open .borger__btn {
+  .header.open .burger__btn {
     filter: invert(1);
   }
 
@@ -515,7 +514,7 @@
     right: 15%;
   }
 
-  .borger__btn {
+  .burger__btn {
     position: absolute;
     right: 1rem;
     top: 1.4rem;
@@ -523,6 +522,7 @@
 
   .header.open {
     background: #fff;
+    overflow-y: scroll;
 
     .header__container {
       display: flex;
