@@ -418,7 +418,6 @@ a {
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
-    overflow-y: scroll;
   }
   .header__wrap {
     border-bottom: none;
@@ -581,17 +580,17 @@ a {
   .header .nav__link:hover {
     color: var(--red);
   }
-  .borger__btn {
+  .burger__btn {
     position: relative;
-    z-index: 1000;
+    z-index: 10;
     -webkit-filter: invert(0);
     filter: invert(0);
   }
-  .header.color--light .borger__btn {
+  .header.color--light .burger__btn {
     -webkit-filter: invert(1);
     filter: invert(1);
   }
-  .header.open .borger__btn {
+  .header.open .burger__btn {
     -webkit-filter: invert(1);
     filter: invert(1);
   }
@@ -613,13 +612,14 @@ a {
     top: 1.11rem;
     right: 15%;
   }
-  .borger__btn {
+  .burger__btn {
     position: absolute;
     right: 1rem;
     top: 1.4rem;
   }
   .header.open {
     background: #fff;
+    overflow-y: scroll;
   }
   .header.open .header__container {
     display: -webkit-box;
@@ -804,7 +804,8 @@ a {
   color: rgb(255, 255, 255);
 }
 .quest .modal__btn {
-  width: 18.9vw;
+  margin-top: 0.5vw;
+  width: 20.9vw;
   height: 4.42vw;
   text-align: center;
 }
@@ -980,8 +981,9 @@ a {
 @media (max-width: 992px) {
   .quest {
     width: 20.2rem;
-    height: 27rem;
+    height: 30rem;
     padding: 3.2rem;
+    padding-bottom: 0;
   }
   .quest .close {
     top: 1rem;
@@ -1012,6 +1014,7 @@ a {
     padding-left: 1rem;
   }
   .quest .modal__btn {
+    margin-top: 1rem;
     width: 15.75rem;
     height: 4.42rem;
   }
